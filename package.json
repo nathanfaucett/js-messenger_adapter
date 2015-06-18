@@ -1,15 +1,15 @@
 {
-  "name": "messenger_adaptor",
+  "name": "messenger_adapter",
   "version": "0.0.1",
   "description": "MessengerAdapter for the browser and node.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nathanfaucett/messenger_adaptor.git"
+    "url": "https://github.com/nathanfaucett/messenger_adapter.git"
   },
   "main": "src/index.js",
   "keywords": [
-    "messenger_adaptor",
-    "messenger_adaptor.js"
+    "messenger_adapter",
+    "messenger_adapter.js"
   ],
   "author": "Nathan Faucett",
   "license": "BSD-2-Clause",

@@ -4,7 +4,7 @@ var assert = require("assert"),
 
 
 describe("createMessengerAdapter()", function() {
-    it("should create messenger adaptor", function() {
+    it("should create messenger adapter", function() {
         var socket = createMessengerAdapter(),
             client = new Messenger(socket.client),
             server = new Messenger(socket.server);
