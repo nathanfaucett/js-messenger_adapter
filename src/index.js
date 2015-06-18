@@ -1,12 +1,12 @@
-var MessengerAdaptorPrototype;
+var MessengerAdapterPrototype;
 
 
-module.exports = createMessengerAdaptor;
+module.exports = createMessengerAdapter;
 
 
-function createMessengerAdaptor() {
-    var client = new MessengerAdaptor(),
-        server = new MessengerAdaptor();
+function createMessengerAdapter() {
+    var client = new MessengerAdapter(),
+        server = new MessengerAdapter();
 
     client.socket = server;
     server.socket = client;
@@ -17,18 +17,18 @@ function createMessengerAdaptor() {
     };
 }
 
-function MessengerAdaptor() {
+function MessengerAdapter() {
     this.socket = null;
     this.__messages = [];
 }
-MessengerAdaptorPrototype = MessengerAdaptor.prototype;
+MessengerAdapterPrototype = MessengerAdapter.prototype;
 
-MessengerAdaptorPrototype.addMessageListener = function(callback) {
+MessengerAdapterPrototype.addMessageListener = function(callback) {
     var messages = this.__messages;
     messages[messages.length] = callback;
 };
 
-MessengerAdaptorPrototype.onMessage = function(data) {
+MessengerAdapterPrototype.onMessage = function(data) {
     var messages = this.__messages,
         i = -1,
         il = messages.length - 1;
@@ -38,6 +38,6 @@ MessengerAdaptorPrototype.onMessage = function(data) {
     }
 };
 
-MessengerAdaptorPrototype.postMessage = function(data) {
+MessengerAdapterPrototype.postMessage = function(data) {
     this.socket.onMessage(data);
 };

@@ -1,7 +1,7 @@
 {
   "name": "messenger_adaptor",
   "version": "0.0.1",
-  "description": "MessengerAdaptor for the browser and node.js",
+  "description": "MessengerAdapter for the browser and node.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/nathanfaucett/messenger_adaptor.git"

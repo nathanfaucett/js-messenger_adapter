@@ -1,4 +1,4 @@
-MessengerAdaptor
+MessengerAdapter
 =======
 
-MessengerAdaptor for the browser and node.js
+MessengerAdapter for the browser and node.js
