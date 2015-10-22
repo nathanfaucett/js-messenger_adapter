@@ -19,22 +19,22 @@ function createMessengerAdapter() {
 
 function MessengerAdapter() {
     this.socket = null;
-    this.__messages = [];
+    this.__listeners = [];
 }
 MessengerAdapterPrototype = MessengerAdapter.prototype;
 
 MessengerAdapterPrototype.addMessageListener = function(callback) {
-    var messages = this.__messages;
-    messages[messages.length] = callback;
+    var listeners = this.__listeners;
+    listeners[listeners.length] = callback;
 };
 
 MessengerAdapterPrototype.onMessage = function(data) {
-    var messages = this.__messages,
+    var listeners = this.__listeners,
         i = -1,
-        il = messages.length - 1;
+        il = listeners.length - 1;
 
     while (i++ < il) {
-        messages[i](data);
+        listeners[i](data);
     }
 };
 
