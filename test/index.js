@@ -1,5 +1,5 @@
 var tape = require("tape"),
-    Messenger = require("messenger"),
+    Messenger = require("@nathanfaucett/messenger"),
     createMessengerAdapter = require("..");
 
 
